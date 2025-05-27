@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Weir Report</title>
+    <style>
+        @font-face{
+        font-family:  'THSarabunNew';
+        font-style: normal;
+        font-weight: normal;
+        src: url("{{ asset('fonts/THSarabunNew.ttf') }}") format('truetype');
+        }
+
+        body{
+        font-family: "THSarabunNew";
+        font-size: 14px;
+        line-height:1;
+        }
+        @page {
+            size: A4 landscape;
+            margin: 5px;
+        }
+        @media print {
+            html, body {
+                width: 210mm;
+                height: 300mm;
+                /*font-size : 16px;*/
+            }
+        }html, body {
+			background-color: #fff;
+			color: #000000;
+			font-family: "THSarabunNew";
+		}.position-ref {
+		position: relative;
+		}
+		.flex-center {
+			align-items: center;
+			display: flex;
+			justify-content: center;
+		}
+		.content {
+			text-align: left;
+			
+		}
+		.title {
+			font-size:15px;
+		}
+		.m-b-md {
+			/* margin-bottom: 2px; */
+        }  
+        .table{
+            width:100%;
+            /* margin-bottom:1rem; */
+            background-color:transparent;
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px black solid;
+            text-align: center;
+        }
+        .rotatehead {
+            transform: rotate(-90deg);
+            /* padding-left: -20px; */
+        }
+        .rotate {
+            font-size: 12px;
+            transform: rotate(-90deg);
+            width: 20px;
+            /* padding-left: -20px; */
+        }
+        .text_rote{
+            width: 25px;
+            height: 40px;
+        }
+        
+        .checkmark{
+            display:inline-block;
+            content: '';
+            width: 3px;
+            height: 10px;
+            border: solid #000;
+            border-width: 0 1px 1px 0;
+            transform: rotate(40deg);
+        }
+        footer {
+            position: fixed; 
+            bottom: 0cm; 
+            left: 0cm; 
+            right: 0cm;
+            height: 0.4cm;
+            color:#000;
+            /* text-align: right; */
+            /* line-height: 1.5cm; */
+            content: counter(page);
+        }
+        .fleft {
+            text-align: left;
+        }
+
+        .fright { 
+            text-align: right;
+        }
+        #footer {
+            max-width: 980px;
+            text-align: center;
+            margin: auto;
+        }
+
+        h3 {
+
+        font-family: 'Source Sans Pro', sans-serif;
+                    text-transform:uppercase;
+                    font-weight : 300;
+                    font-size : 14px;
+                    color : #000;
+
+        }
+
+        .copyright {
+            float: left;
+        }
+
+        .social {
+            float: right;
+        }
+        .customers {
+            border-collapse: collapse;
+            border: 4px solid #fff;
+            border-color: #fff;
+        }
+    </style>
+ </head>
+    <body>
+        <div class="row" align="center" style="page-break-after:always; margin-top:60px;"> 
+            <table align="center" class="customers" width="80%">
+                <tr >
+                    <td width="30%" class="customers"><img src="images/footer/hii.png" width="100px"></td>
+                    <td class="customers"><font style="font-size:70px;"><b>รายงานสรุป</b></font></td>
+                    <td width="30%" class="customers"><img src="images/footer/cmu.png" width="100px"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" height=150px; class="customers"> <font style="font-size:42px;"><b>ผลการตรวจประเมินสภาพฝายแต่ละองค์ประกอบ</b></td>
+                </tr>
+                <tr>
+                    <td colspan="3" height=150px; class="customers"> <font style="font-size:50px;"><b><?php echo $text_amp ?>  จังหวัดแพร่</b></td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="customers"> <font style="font-size:32px;"><b>โครงการพัฒนาระบบการสำรวจและฐานข้อมูลเพื่อบริหารจัดการพื้นที่เสี่ยงภัยน้ำท่วมและภัยแล้ง 
+                    <br>ระดับจังหวัดในพื้นที่ภาคเหนือตอนบน (ระยะที่ 1)<b></td>
+                </tr>
+                <tr>
+                    <td colspan="3" height=80px;> <font style="font-size:26px;"><b>โดย สถาบันสารสนเทศทรัพยากรน้ำ (องค์การมหาชน)  ร่วมกับ มหาวิทยาลัยเชียงใหม่<b></td>
+            </table>
+
+        </div>
+        <footer>
+            <div class="social"><u>หมายเหตุ</u> ข้อมูลใช้เพื่อการศึกษาวางแผน ไม่สามารถใช้อ้างอิงทางกฎหมายและคดีความ </div>
+            <div style="clear: both"></div>
+        </footer>
+        <?php 
+            // function score($t,$s,$sc){
+            //     if ($t == $s){ return $sc; }
+            // }
+            function score($t, $s){
+                if ($t == $s){  echo "<div class=\"checkmark\"></div>";}
+            }
+            function score_level($t, $s){
+                if ($t == $s){
+            
+                    return "/";
+                }
+            }
+            function changeText($t){
+                if($t==1){
+                    return "ใช้งานได้ดี";
+                }else if($t==2){
+                    return "ปานกลาง";
+                }else if($t==3){
+                    return "ทรุดโทรม";
+                }else{
+                    return "-";
+                }
+            }
+        ?>
+        <div class="text1">
+            <table class="table table-bordered">
+                <thead align="center" >
+                    <tr style="background-color:#C0C0C0">
+                        <td rowspan="3" class="text-center">#</td>
+                        <td rowspan="3" class="text-center">รหัส</td>
+                        <td rowspan="3"> ชื่อฝาย <br> (ชื่อลำน้ำ) </td>
+                        <td rowspan="3"> หมู่บ้าน <br> ตำบล</td>
+                        <td colspan="2"> พิกัด</td>
+                        <td colspan="18">สภาพของฝายแต่ละองค์ประกอบ</td>
+                        <td rowspan="3"> <div class='rotatehead'> สภาพฝาย </div></td>
+                        <td rowspan="3">หน่วยงาน<br>รับผิดชอบ</td>
+                        <td rowspan="3">วันที่<br>สำรวจ</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2"><div class='rotatehead'> ละติจูด </div></td>      
+                        <td rowspan="2"><div class='rotatehead'> ลองจิจูด </div></td>     
+                        <td colspan="3">ส่วน Protection เหนือน้ำ</td>
+                        <td colspan="3">ส่วนเหนือน้ำ</td>
+                        <td colspan="3">ส่วนควบคุมน้ำ</td>
+                        <td colspan="3">ส่วนท้ายน้ำ</td>
+                        <td colspan="3">ส่วน Protection ท้ายน้ำ</td>
+                        <td colspan="3">ระบบส่งน้ำ</td>
+                    </tr>
+                    <tr>
+                        <td class="text_rote"> <div class='rotate'> ใช้งานได้ดี </div></td>
+                        <td class="text_rote"><div class='rotate'> ปานกลาง </div></td>
+                        <td class="text_rote"><div class='rotate'>ทรุดโทรม </div> </td>
+                        <td class="text_rote"> <div class='rotate'> ใช้งานได้ดี </div></td>
+                        <td class="text_rote"><div class='rotate'> ปานกลาง </div></td>
+                        <td class="text_rote"><div class='rotate'>ทรุดโทรม </div> </td>
+                        <td class="text_rote"> <div class='rotate'> ใช้งานได้ดี </div></td>
+                        <td class="text_rote"><div class='rotate'> ปานกลาง </div></td>
+                        <td class="text_rote"><div class='rotate'>ทรุดโทรม </div> </td>
+                        <td class="text_rote"> <div class='rotate'> ใช้งานได้ดี </div></td>
+                        <td class="text_rote"><div class='rotate'> ปานกลาง </div></td>
+                        <td class="text_rote"><div class='rotate'>ทรุดโทรม </div> </td>
+                        <td class="text_rote"> <div class='rotate'> ใช้งานได้ดี </div></td>
+                        <td class="text_rote"><div class='rotate'> ปานกลาง </div></td>
+                        <td class="text_rote"><div class='rotate'>ทรุดโทรม </div> </td>
+                        <td class="text_rote"> <div class='rotate'> ใช้งานได้ดี </div></td>
+                        <td class="text_rote"><div class='rotate'> ปานกลาง </div></td>
+                        <td class="text_rote"><div class='rotate'>ทรุดโทรม </div> </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php 
+                    if($dataNo==1){ ?>
+                        <tr>
+                            <td colspan="34">------- ไม่มีข้อมูล -------</td>
+                        </tr> 
+                    <?php }
+                    else{
+                        $num =count($result);
+                        for($i=0;$i<$num;$i++){?>
+                        <tr>
+                            <td ><?php echo $i+1 ?></td>
+                            <td><?php echo $result[$i]['weir_code'] ?></td>
+                            <td><?php echo $result[$i]['weir_name'] ?> <br> (<?php echo $result[$i]['river'] ?>) </td>
+                            <td><?php echo $result[$i]['weir_village'] ?> <br> <?php echo $result[$i]['weir_tumbol'] ?></td>
+                            <td><?php echo $result[$i]['lat'] ?></td>
+                            <td><?php echo $result[$i]['long'] ?></td>
+                            <td><?php echo score($result[$i]['damage_1'],1)  ?></td>
+                            <td><?php echo score($result[$i]['damage_1'],2) ?></td>
+                            <td><?php echo score($result[$i]['damage_1'],3) ?></td>
+
+                            <td><?php echo score($result[$i]['damage_2'],1) ?></td>
+                            <td><?php echo score($result[$i]['damage_2'],2) ?></td>
+                            <td><?php echo score($result[$i]['damage_2'],3) ?></td>
+
+                            <td><?php echo score($result[$i]['damage_3'],1) ?></td>
+                            <td><?php echo score($result[$i]['damage_3'],2) ?></td>
+                            <td><?php echo score($result[$i]['damage_3'],3) ?></td>
+
+                            <td><?php echo score($result[$i]['damage_4'],1) ?></td>
+                            <td><?php echo score($result[$i]['damage_4'],2) ?></td>
+                            <td><?php echo score($result[$i]['damage_4'],3) ?></td>
+
+                            <td><?php echo score($result[$i]['damage_5'],1) ?></td>
+                            <td><?php echo score($result[$i]['damage_5'],2) ?></td>
+                            <td><?php echo score($result[$i]['damage_5'],3) ?></td>
+
+                            <td><?php echo score($result[$i]['damage_6'],1) ?></td>
+                            <td><?php echo score($result[$i]['damage_6'],2) ?></td>
+                            <td><?php echo score($result[$i]['damage_6'],3) ?></td>
+
+                            <td><?php echo  changeText($result[$i]['classSum']) ?></td>
+                            <td><?php echo  wordwrap($result[$i]['resp_name'],5, "<br/>\n") ?></td> 
+                            <td><?php echo $date[$i]?></td> 
+                        </tr>
+
+                        <?php }
+                    } ?>
+
+                </tbody>
+            </table>
+        </div>
+               
+       
+    </body>
+</html>
