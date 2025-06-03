@@ -482,7 +482,7 @@
             
             <div class="text4">1.6 พื้นที่รับประโยชน์ 
                 <font style="margin-left:35px;">ด้านการเกษตร&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ประมาณ<span class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $space[0]->agriculture?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>ไร่ </font>
-                <font style="margin-left:50px;">&nbsp;&nbsp;&nbsp;ด้านอุปโภคบริโภค&nbsp;&nbsp;&nbsp;&nbsp; ประมาณ<span class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $space[0]->comsumption?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>ไร่ </font>
+                <font style="margin-left:50px;">&nbsp;&nbsp;&nbsp;ด้านอุปโภคบริโภค&nbsp;&nbsp;&nbsp;&nbsp; ประมาณ<span class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $space[0]->comsumption?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>ครัวเรือน </font>
             </div>
         </div>
         <div class="text">

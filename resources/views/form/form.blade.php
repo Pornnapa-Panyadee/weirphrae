@@ -801,7 +801,7 @@
                                                 <div class="col-sm-1"></div>
                                                 ด้านอุปโภคบริโภค 
                                                 <div class="col-sm-2">
-                                                       <input id="consumption" name="consumption" type="text" class="form-control" placeholder="ไร่">
+                                                       <input id="consumption" name="consumption" type="text" class="form-control" placeholder="ครัวเรือน">
                                                 </div> 
                                             </div>
                                             <!-- 2.ระบบส่งน้ำ -->

@@ -874,7 +874,7 @@
                                                 <div class="col-sm-1"></div>
                                                 ด้านอุปโภคบริโภค 
                                                 <div class="col-sm-2">
-                                                       <input id="comsumption" name="comsumption" type="text" class="form-control" placeholder="ไร่" value="{{$space[0]->comsumption}}">
+                                                       <input id="comsumption" name="comsumption" type="text" class="form-control" placeholder="ครัวเรือน" value="{{$space[0]->comsumption}}">
                                                 </div> 
                                                
                                             </div>
