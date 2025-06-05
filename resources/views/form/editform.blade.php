@@ -2526,7 +2526,7 @@
                                               </div>
                                               <div class="form-group row" style="margin-top:-40px;margin-bottom:50px;">
                                                 <div class="col-sm-9">
-                                                    <textarea rows="5" cols="5" id="suggustion" name="suggustion" class="form-control" placeholder="--ระบุความเห็นเพิ่มเติม--" value="{{$sug[0]->suggestion}}"></textarea>
+                                                    <textarea rows="5" cols="5" id="suggustion" name="suggustion" class="form-control" placeholder="--ระบุความเห็นเพิ่มเติม--" > {{$sug[0]->suggestion}}</textarea>
                                                 </div>
                                               </div>
                                           </fieldset>
