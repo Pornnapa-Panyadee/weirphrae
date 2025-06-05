@@ -2,7 +2,7 @@
 <html lang="en">
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <meta charset="utf-8">
-    <meta name="asset-path" content="{{ url('/') }}">
+    <meta name="asset-path" content="{{ url('/phrae/') }}">
     <title>Phrae Weir </title>
 
     <link rel="icon" href="{{ asset('images/icon/favicon1.ico')}}" type="image/x-icon">
