@@ -1,6 +1,6 @@
 $(document).ready(function () {
     // โหลดอำเภอของจังหวัดแพร่
-    $.getJSON('/district/แพร่', function (data) {
+    $.getJSON('/weir/phrae/district/แพร่', function (data) {
         $.each(data, function (i, obj) {
             $('#district').append('<option value="' + obj.vill_district + '">' + obj.vill_district + '</option>');
         });
@@ -12,7 +12,7 @@ $(document).ready(function () {
         $('#subdistrict').empty().append('<option value="">-- เลือกตำบล --</option>');
 
         if (district) {
-            $.getJSON('/subdistrict/' + encodeURIComponent(district), function (res) {
+            $.getJSON('/weir/phrae/subdistrict/' + encodeURIComponent(district), function (res) {
                 $.each(res.data, function (i, obj) {
                     $('#subdistrict').append('<option value="' + obj.vill_tunbol + '">' + obj.vill_tunbol + '</option>');
                 });
