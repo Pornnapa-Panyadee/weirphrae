@@ -227,7 +227,7 @@
                         <td width="20%"><b>หมู่บ้าน</b> หมู่ที่ &nbsp;<?php echo $moo; ?>&nbsp;<?php echo $tambol; ?></td>
                         <td width="15%"><b>ตำบล</b> &nbsp;<?php echo $location[0]['weir_tumbol']; ?></td>
                         <td width="15%"><b>อำเภอ</b> &nbsp;<?php echo $location[0]['weir_district']; ?></td>
-                        <td width="15%"><b>จังหวัด</b> &nbsp;ลำปาง</td>
+                        <td width="15%"><b>จังหวัด</b> &nbsp;แพร่</td>
                         <td  >&nbsp;</td>
                     </tr>
                 </table>

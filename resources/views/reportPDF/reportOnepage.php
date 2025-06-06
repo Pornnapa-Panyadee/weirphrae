@@ -218,7 +218,7 @@
                         <td width="20%">หมู่บ้าน : หมู่ที่ &nbsp;<?php echo $moo; ?>&nbsp;<?php echo $tambol; ?></td>
                         <td width="15%">ตำบล : &nbsp;<?php echo $location[0]->weir_tumbol; ?></td>
                         <td width="15%">อำเภอ : &nbsp;<?php echo $location[0]->weir_district; ?></td>
-                        <td width="15%">จังหวัด : &nbsp;ลำปาง</td>
+                        <td width="15%">จังหวัด : &nbsp;แพร่</td>
                         <td  >&nbsp;</td>
                     </tr>
                 </table>

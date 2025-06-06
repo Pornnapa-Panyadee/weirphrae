@@ -15,7 +15,7 @@ class Location extends Model
         return $value;
     }
     public static function getDistrictCR(){
-        $value=DB::table('locations')->where('vill_province','=','ลำปาง')->distinct()->get('vill_district'); 
+        $value=DB::table('locations')->where('vill_province','=','แพร่')->distinct()->get('vill_district'); 
         //$value=DB::table('villages')->distinct()->get(); 
         return $value;
     }

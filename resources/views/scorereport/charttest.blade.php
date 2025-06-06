@@ -181,7 +181,7 @@
                                                                                 <option value="งาว">งาว</option>
                                                                                 <option value="แม่พริก">แม่พริก</option>
                                                                                 <option value="เมืองปาน">เมืองปาน</option>
-                                                                                <option value="เมืองลำปาง">เมืองลำปาง</option>
+                                                                                <option value="เมืองแพร่">เมืองแพร่</option>
                                                                                 <option value="วังเหนือ">วังเหนือ</option>
                                                                                 <option value="เสริมงาม">เสริมงาม</option>
                                                                             </select> 

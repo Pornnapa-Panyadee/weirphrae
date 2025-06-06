@@ -390,7 +390,7 @@ class FormsController extends Controller
               'weir_village'=>$request->weir_village,
               'weir_tumbol'=>$request->weir_tumbol,
               'weir_district'=>$request->weir_district,
-              'weir_province'=>"ลำปาง", 
+              'weir_province'=>"แพร่", 
             ]
           );
           $location->save();
@@ -1329,7 +1329,7 @@ class FormsController extends Controller
           'weir_village'=>$request->weir_village,
           'weir_tumbol'=>$request->weir_tumbol,
           'weir_district'=>$request->weir_district,
-          'weir_province'=>"ลำปาง", 
+          'weir_province'=>"แพร่", 
         ]
       );
       // dd($request->weir_spec_id);

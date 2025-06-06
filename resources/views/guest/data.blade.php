@@ -266,7 +266,7 @@
                                                         <td data-label="ที่ตั้ง">{{$data[$i]['weir_village']}} </td>
                                                         <td>{{$data[$i]['weir_tumbol']}} </td>
                                                         <td>{{$data[$i]['weir_district']}}</td>
-                                                        <td>ลำปาง</td>
+                                                        <td>แพร่</td>
                                                         <td>{{ $data[$i]['UTM_x']}}</td>
                                                         <td>{{ $data[$i]['UTM_y']}}</td>
 
