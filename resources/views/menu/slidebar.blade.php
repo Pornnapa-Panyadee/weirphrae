@@ -56,7 +56,7 @@
                 <a  href="javascript:void(0)" >
                 <span class="pcoded-mtext"><i class="fa fa-map-pin"></i> ปรับปรุง/เพิ่มเติมสภาพฝาย </span>
                 </a>
-                <ul class="pcoded-submenu">
+                <!-- <ul class="pcoded-submenu">
                     <li class="">
                         <a href="https://forms.gle/mjPJi6VQjQSEt2ro6" target=_blank>
                           <span class="pcoded-mtext">ฟอร์มสำรวจ</span>
@@ -69,7 +69,7 @@
                     </li>
                     
                     
-                </ul>
+                </ul> -->
             </li>
 
             <li class="pcoded-hasmenu">
@@ -98,7 +98,7 @@
                 <ul class="pcoded-submenu">
                     <li class="">
                         <a href="https://blockage.crflood.com/mapthai/chiangrai" target="_blank" >
-                          <span class="pcoded-mtext">IDF Curve รายอำเภอ (จ.ลำปาง) </span>
+                          <span class="pcoded-mtext">IDF Curve รายอำเภอ (จ.แพร่) </span>
                         </a>
                     </li>
                     <li class="">

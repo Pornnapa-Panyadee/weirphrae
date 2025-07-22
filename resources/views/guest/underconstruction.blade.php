@@ -19,28 +19,14 @@
     <link rel="stylesheet" href="{{ asset('css/form/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/form/waves.min.css')}}" type="text/css" media="all">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/form/jquery.steps.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/form/feather.css')}}">
     <link rel="stylesheet" href="{{ asset('css/form/style1.css')}}">
-
     <style>
-      .text{
-        font-size: 18px;
-        margin: 5px;
-        margin-bottom: 20px;
-        padding:10px;
-        text-indent: 5em;
-      }
-      .text2{
-        font-size: 18px;
-        margin-left: 5em;
-        padding:5px;
-      }
-      .text3{
-        font-size: 18px;
-        margin-left: 7em;
-        padding:5px;
-      }
+        td{
+            font-size:18px;
+        }
     </style>
+
+    
   </head>
 
   <body class="horizontal-icon-fixed" >
@@ -60,39 +46,30 @@
              @include('menu.slidebar')
             <!-- Map -->
             <div class="pcoded-content">
-              <div class="card"></div>
+              <div class="card"><h3></h3></div>
                 <div class="pcoded-inner-content">
                     <div class="main-body">
                         <div class="page-wrapper">
-                            <div class="row justify-content-md-center">
+                            <div class="row">
                                 <div class="col-md-12">
                                     <div class="card table-card">
-                                        <div class="card-header ">
-                                        <h2>ติดต่อเรา</h2>     
+                                        <div class="card-header">
+                                        <h3></h3>     
                                         <hr>                         
                                         </div>
-                                        <div class="card-block">
-                                            <div class="row justify-content-md-center">
-                                                <div class="col-md-10 col-lg-10">
-                                                    <div class="card">
-                                                        <div class="card-block">
-                                                            <center><td> <a href="https://cendim.eng.cmu.ac.th/">  <img src="{{ asset('images/footer/cendim.png') }}" width="30%"></a></td> </center><br>
-                                                            <div align="center" style="margin-left:30px;">
-                                                                <h2 style="font-size:1.6vw"> ศูนย์ความเป็นเลิศด้านการจัดการภัยพิบัติทางธรรมชาติ คณะวิศวกรรมศาสตร์  มหาวิทยาลัยเชียงใหม่ </h2>
-                                                            
-                                                                <div  style="font-size:1.2vw">
-                                                                    ที่อยู่ : 239 ถนนห้วยแก้ว ต.สุเทพ อ.เมือง จ.เชียงใหม่ 50200<br>
-                                                                    โทร : 053-942074<br>
-                                                                    โทรสาร : 053-942074<br>
-                                                                    Facebook:  <a href="https://www.facebook.com/CENDiMcmuCENDiMcmu" style="font-size:1.2vw"> CENDiMcmu </a><br>
-                                                                    Website : <a href="https://cendim.eng.cmu.ac.th/" style="font-size:1.2vw">www.cendru.eng.cmu.ac.th </a><br>
-                                                                </div>
-                                                            
+                                        <div class="card-header">
+                                            <div class="content">
+                                                <div class="title m-b-md">
+                                                    <form id="amp" name="amp" action="{{route('report.pdf')}}" enctype="multipart/form-data" method="POST" >
+                                                        @csrf 
+                                                            <div class="row justify-content-center">
+                                                                <img  src="{{ asset('images/banner/underconstruct.png') }}" width=50% >
                                                             </div>
-                                                        </div>
-                                                    </div>
+                                                    </form>
+                                                    
                                                 </div>
                                             </div>
+                                    
                                         </div>
                                     </div>
                                     
@@ -120,7 +97,9 @@
     <script src="{{ asset('js/form/menu-hori-fixed.js')}}" ></script>
     <script src="{{ asset('js/form/jquery.mcustomscrollbar.concat.min.js')}}" ></script>
     <script src="{{ asset('js/form/script.js')}}"></script>
-   
+    <script async  src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    
+    <script src="{{ asset('js/form/rocket-loader.min.js')}}"></script>
   
     <script src="{{ asset('js/form/jquery.datatables.min.js')}}" ></script>
     <script src="{{ asset('js/form/datatables.buttons.min.js')}}" ></script>
@@ -138,6 +117,9 @@
     <script src= "{{ asset('js/form/pcoded.min.js') }}"></script>
     <script src= "{{ asset('js/form/jquery.mcustomscrollbar.concat.min.js') }}"></script>
 
+    <script src= "{{ asset('js/form/script.js') }}"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13" ></script>
+    <script src= "{{ asset('js/chooselocationReport.js') }}"></script>
   
     <script src="{{ asset('js/form/rocket-loader.min.js')}}" data-cf-settings="ce2668daaac54a74e9f6cdff-|49" defer=""></script>
 

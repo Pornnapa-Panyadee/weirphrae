@@ -940,7 +940,8 @@ class ReportPDFController extends Controller
     }
 
     public function reportpdf_warning($weir_id=0) {
-        return view('guest.warning'); 
+        // return view('guest.warning'); 
+        return view('guest.underconstruction'); 
         
     }
 
