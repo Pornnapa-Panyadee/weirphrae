@@ -66,7 +66,7 @@
                                                                 <div class="col-lg-7 col-md-12">
                                                                     <div class="card text-white card-inverse">
                                                                         <div class="card-header">
-                                                                            <center><h3> อยู่ระหว่างการดำเนินงาน</h3></center>
+                                                                                <center><h3> อยู่ระหว่างการดำเนินงาน</h3></center>
                                                                         </div>
                                                                          
                                                                     </div>

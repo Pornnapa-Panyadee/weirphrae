@@ -1,4 +1,4 @@
-// https://watercenter.scmc.cmu.ac.th/weir/jang_basin/location/getTumbol/เมืองแพร่
+// https://watercenter.scmc.cmu.ac.th/weir/jang_basin/location/getTumbol/เมืองลำปาง
 var ID = window.location.href.replace("https://watercenter.scmc.cmu.ac.th/weir/lampang/", "");
 function Province(id, district) {
 

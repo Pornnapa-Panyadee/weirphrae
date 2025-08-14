@@ -6,9 +6,9 @@ use Illuminate\Support\Facades\Route;
 
 
 Auth::routes();
-// Route::get('/register', function () {
-//     abort(404); // หรือ redirect('/login')
-// });
+Route::get('/register', function () {
+    abort(404); // หรือ redirect('/login')
+});
 #Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 // ----- Guest -----
 // Route::get('/', 'App\Http\Controllers\DataSurveyController@getDataHomeTable');
