@@ -346,21 +346,35 @@ class FormsController extends Controller
           $codeweir="W".$code[0]->vill_code.'%';       
           $weircode = DB::table('weir_surveys')->select('weir_code')->where('weir_code','like',$codeweir)->get();
           $wcode = DB::table('weir_surveys')->select('weir_code')->where('weir_code','like',$codeweir)->get()->last();
-          if($wcode == NULL){
-            $num=calCodeW(count($weircode));
-            $codeweir="W".$code[0]->vill_code.$num;
-          }else{
-            $c = str_split($wcode->weir_code,1);
-            if((int)$c[9]>0){
-              $n = $c[9].$c[10];
-              $num=calCodeW((int)$n);
-              $codeweir="W".$code[0]->vill_code.$num;
-            }else{
-              $num=calCodeW((int)$c[10]);
-              $codeweir="W".$code[0]->vill_code.$num;
-
-            }
+          
+          if ($wcode == NULL) {
+            $num = calCodeW(count($weircode));
+            $codeweir = "W" . $code[0]->vill_code . $num;
+          } else {
+              // ตัดเลข 2 ตัวท้ายสุด จาก weir_code
+              $lastCode = $wcode->weir_code;
+              $n = (int)substr($lastCode, -2); // ตัด 2 ตัวท้ายสุด เช่น 01
+              $num = calCodeW($n);             // สมมุติ calCodeW เพิ่ม 1 แล้วเติม 0
+              $codeweir = "W" . $code[0]->vill_code . $num;
           }
+          
+          
+          
+          // if($wcode == NULL){
+          //   $num=calCodeW(count($weircode));
+          //   $codeweir="W".$code[0]->vill_code.$num;
+          // }else{
+          //   $c = str_split($wcode->weir_code,1);
+          //   if((int)$c[9]>0){
+          //     $n = $c[9].$c[10];
+          //     $num=calCodeW((int)$n);
+          //     $codeweir="W".$code[0]->vill_code.$num;
+          //   }else{
+          //     $num=calCodeW((int)$c[10]);
+          //     $codeweir="W".$code[0]->vill_code.$num;
+
+          //   }
+          // }
           
           // $n = $c[9].$c[10];
 
