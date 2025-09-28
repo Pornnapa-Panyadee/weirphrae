@@ -4,6 +4,12 @@
             <div class="pcoded-navigation-label">ข้อมูลฝาย</div>
                     <ul class="pcoded-item pcoded-left-item">
                         <li class="pcoded-hasmenu">
+                            <a href="{{ url('/admin/map') }}" class="waves-effect waves-dark">
+                                <span class="pcoded-micon"><i class="feather icon-settings"></i></span>
+                                <span class="pcoded-mtext">แผนที่ข้อมูลฝาย</span>
+                            </a>
+                        </li>
+                        <li class="pcoded-hasmenu">
                             <a href="javascript:void(0)" class="waves-effect waves-dark">
                                 <span class="pcoded-micon"><i class="feather icon-home"></i></span>
                                 <span class="pcoded-mtext">ข้อมูลฝาย</span>

@@ -310,11 +310,9 @@ class DataSurveyController extends Controller
         $district['name']=Location::getprovinceDistrict();
         // dd($district);
         return view('guest.index',compact('data','district'));      
-        
-        
     }
 
-    public function getDataHomeTabletesth(Request $request) {
+    public function getDataHomeTableAdm(Request $request) {
         $data=[];
         $dataUser=[];
         $screenWidth = $this->calculateScreenWidth();
@@ -333,8 +331,6 @@ class DataSurveyController extends Controller
                 $request->amp=$request->amp;
             }
         }
-        
-        
         if(!empty($request->amp)){
             if(!empty($request->tumbol)){
                 $location = WeirLocation::select('*')->where('weir_district',$request->amp)->where('weir_tumbol',$request->tumbol)->get();
@@ -364,24 +360,6 @@ class DataSurveyController extends Controller
                     'date'=>$weir[0]->created_at
                 ];     
             }
-            $apiUrl = 'https://watercenter.scmc.cmu.ac.th/weir/jang_basin/api/getDataHomeTable';
-            $response = Http::get($apiUrl);
-            $data1 = $response->json();
-            for ($i=0;$i<count($data1[0]['data']);$i++){ 
-                $data[count($location)+$i] = $data1[0]['data'][$i];
-            }
-
-        }elseif($request->amp=="แม่เมาะ" || $request->amp=="แม่ทะ"){
-            if(!empty($request->tumbol)){
-                $apiUrl = 'https://watercenter.scmc.cmu.ac.th/weir/jang_basin/api/getDataHomeTable/'.$request->amp.'/'.$request->tumbol;
-            }else{
-                $apiUrl = 'https://watercenter.scmc.cmu.ac.th/weir/jang_basin/api/getDataHomeTable/'.$request->amp.'/0';
-            }
-            $response = Http::get($apiUrl);
-            $data1 = $response->json();
-            for ($i=0;$i<count($data1[0]['data']);$i++){ 
-                $data[count($location)+$i] = $data1[0]['data'][$i];
-            }
         }else{
             for ($i=0;$i<count($location);$i++){ 
             
@@ -409,13 +387,7 @@ class DataSurveyController extends Controller
         // dd($data);
         $district['name']=Location::getprovinceDistrict();
         // dd($district);
-        if($request->amp=="sum"){
-            $amp="ทั้งหมด";
-        }else{$amp=$request->amp;}
-        
-        return view('guest.indexh',compact('data','district','amp'));      
-        
-        
+        return view('admin.map',compact('data','district'));      
     }
 
     public function getDatabyWeir($id=0) {
@@ -508,44 +480,7 @@ class DataSurveyController extends Controller
     }
 
 
-    public function getDataHomeTabletest(Request $request) {
-        // dd($request);
-        $data=[];
-        $dataUser=[];
-        if(!empty($request->amp)){
-            if(!empty($request->tumbol)){
-                $location = WeirLocation::select('*')->where('weir_district',$request->amp)->where('weir_tumbol',$request->tumbol)->get();
-            }else{
-                $location = WeirLocation::select('*')->where('weir_district',$request->amp)->get();
-            }
-        }else{
-                $location = WeirLocation::select('*')->get();
-        }
-        
-        for ($i=0;$i<count($location);$i++){ 
-            $weir = WeirSurvey::select('weir_id','weir_code','weir_name','river_id','user','created_at')->where('weir_location_id',$location[$i]->weir_location_id)->get();
-            $river = River::select('river_name')->where('river_id',$weir[0]->river_id)->get();
-            $latlong=json_decode($location[$i]->latlong);
-            $data[] = [
-                'weir_id'=> $weir[0]->weir_id,
-                'weir_code'=> $weir[0]->weir_code,
-                'weir_name'=> $weir[0]->weir_name,
-                'lat'=>$latlong->x,
-                'long'=>$latlong->y,
-                'weir_village'=> $location[$i]->weir_village,
-                'weir_tumbol'=> $location[$i]->weir_tumbol,
-                'weir_district'=> $location[$i]->weir_district,
-                'river' => $river[0]->river_name,
-                'date'=>$weir[0]->created_at
-            ];      
-        }
-        $district['name']=Location::getprovinceDistrict();
-        // dd($district);
-        return view('guest.test',compact('data','district'));      
-        
-        
-    }
-
+   
      public function getData(Request $request) {
 
         $location = WeirLocation::select('*')->get();

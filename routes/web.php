@@ -11,7 +11,8 @@ Auth::routes();
 // });
 #Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 // ----- Guest -----
-// Route::get('/', 'App\Http\Controllers\DataSurveyController@getDataHomeTable');
+Route::get('/admin/map', 'App\Http\Controllers\DataSurveyController@getDataHomeTableAdm');
+//Route::get('/', 'App\Http\Controllers\DataSurveyController@getDataHomeTable');
 Route::get('/', 'App\Http\Controllers\ReportPDFController@reportpdf_warning');
 // ----- Guest -----
 
