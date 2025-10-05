@@ -26,9 +26,9 @@
 
     <!-- leaflet -->
     
-    <link rel="stylesheet" href="{{ asset('css/form/leaflet.css')}}" crossorigin=""/>
-   <script src="{{ asset('js/leaflet-omnivore.min.js')}}"  crossorigin=""></script>
-    <script src="{{ asset('js/leaflet-src.js')}}"  crossorigin=""></script>
+    <link rel="stylesheet" href="{{ asset('/css/form/leaflet.css')}}" crossorigin=""/>
+    <script src="{{ asset('/js/leaflet-omnivore.min.js')}}"  crossorigin=""></script>
+    <script src="{{ asset('/js/leaflet-src.js')}}"  crossorigin=""></script>
 
     <style type="text/css">
       #map{
@@ -191,6 +191,7 @@
                                       </thead>
                                       <tbody>     
                                       <?php for($i = 0;$i < count($data); $i++){  ?>
+                                      
                                         <tr>
                                           <td align="center">{{$i+1}} </td>
                                           <td><a href='{{ asset('/report/pdf') }}/{{$data[$i]['weir_code']}}' target="_blank"> {{$data[$i]['weir_code']}} </a></td>
@@ -232,20 +233,19 @@
 
       </div>
     </div>
-    
-    <script src="{{ asset('js/form/jquery.min.js')}}"></script>
-    <script src="{{ asset('js/form/jquery-ui.min.js')}}"></script>
+    <script src="{{ asset('/js/form/jquery.min.js')}}"></script>
+    <script src="{{ asset('/js/form/jquery-ui.min.js')}}"></script>
     <!-- <script src="{{ asset('js/form/popper.min.js')}}"></script> -->
-    <script src="{{ asset('js/form/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('/js/form/bootstrap.min.js')}}"></script>
 
     <!-- <script src="{{ asset('js/form/waves.min.js')}}" ></script> -->
 
-    <script src="{{ asset('js/form/jquery.slimscroll.js')}}"></script>
+    <script src="{{ asset('/js/form/jquery.slimscroll.js')}}"></script>
 
     <!-- <script src="{{ asset('js/form/modernizr.js')}}"></script> -->
     <!-- <script src="{{ asset('js/form/css-scrollbars.js')}}"></script> -->
 
-    <script src="{{ asset('js/form/jquery.datatables.min.js')}}" ></script>
+    <script src="{{ asset('/js/form/jquery.datatables.min.js')}}" ></script>
     <!-- <script src="{{ asset('js/form/datatables.buttons.min.js')}}" ></script> -->
     <!-- <script src="{{ asset('js/form/jszip.min.js')}}" ></script> -->
     <!-- <script src="{{ asset('js/form/pdfmake.min.js')}}" ></script> -->
@@ -254,20 +254,20 @@
 
     <!-- <script src="{{ asset('js/form/datatables.colreorder.min.js')}}" ></script>
     <script src="{{ asset('js/form/buttons.print.min.js')}}" ></script> -->
-    <script src="{{ asset('js/form/datatables.bootstrap4.min.js')}}" ></script>
-    <script src="{{ asset('js/form/datatables.responsive.min.js')}}" ></script>
-    <script src="{{ asset('js/form/responsive.bootstrap4.min.js')}}"></script>
+    <script src="{{ asset('/js/form/datatables.bootstrap4.min.js')}}" ></script>
+    <script src="{{ asset('/js/form/datatables.responsive.min.js')}}" ></script>
+    <script src="{{ asset('/js/form/responsive.bootstrap4.min.js')}}"></script>
 
     <script src= "{{ asset('js/form/fixed-header-custom.js') }}"></script>
 
-    <script src= "{{ asset('js/form/pcoded.min.js') }}"></script>
-    <script src= "{{ asset('js/form/vertical-layout.min.js') }}"></script>
-    <script src= "{{ asset('js/form/jquery.mcustomscrollbar.concat.min.js') }}"></script>
+    <script src= "{{ asset('/js/form/pcoded.min.js') }}"></script>
+    <script src= "{{ asset('/js/form/vertical-layout.min.js') }}"></script>
+    <script src= "{{ asset('/js/form/jquery.mcustomscrollbar.concat.min.js') }}"></script>
 
-    <script src= "{{ asset('js/form/script.js') }}"></script>
+    <script src= "{{ asset('/js/form/script.js') }}"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13" ></script>
   
-    <script src="{{ asset('js/form/rocket-loader.min.js')}}" data-cf-settings="ce2668daaac54a74e9f6cdff-|49" defer=""></script>
+    <script src="{{ asset('/js/form/rocket-loader.min.js')}}" data-cf-settings="ce2668daaac54a74e9f6cdff-|49" defer=""></script>
     <!-- Map script -->
     <link rel="stylesheet" href="{{ asset('css/L.Control.Layers.Tree.css')}}" crossorigin=""/>
     <script src="{{ asset('/js/L.Control.Layers.Tree.js')}}"></script>

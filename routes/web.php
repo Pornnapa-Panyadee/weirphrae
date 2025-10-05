@@ -12,8 +12,8 @@ Auth::routes();
 #Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 // ----- Guest -----
 Route::get('/admin/map', 'App\Http\Controllers\DataSurveyController@getDataHomeTableAdm');
-//Route::get('/', 'App\Http\Controllers\DataSurveyController@getDataHomeTable');
-Route::get('/', 'App\Http\Controllers\ReportPDFController@reportpdf_warning');
+Route::get('/', 'App\Http\Controllers\DataSurveyController@getDataHomeTable');
+// Route::get('/', 'App\Http\Controllers\ReportPDFController@reportpdf_warning');
 // ----- Guest -----
 
 
@@ -29,15 +29,15 @@ Route::get('location/getVillage/{amp}/{tambol}', 'App\Http\Controllers\LocationC
 
 // ------Tab 1 Info Weir  ------
 
-Route::get('/report/map', 'App\Http\Controllers\ReportPDFController@reportpdf_warning');
-Route::get('/report/chart', 'App\Http\Controllers\ReportPDFController@reportpdf_warning');
-Route::get('/report/scoreComposition', 'App\Http\Controllers\ReportPDFController@reportpdf_warning');
-Route::get('/report/problem', 'App\Http\Controllers\ReportPDFController@reportpdf_warning');
+// Route::get('/report/map', 'App\Http\Controllers\ReportPDFController@reportpdf_warning');
+// Route::get('/report/chart', 'App\Http\Controllers\ReportPDFController@reportpdf_warning');
+// Route::get('/report/scoreComposition', 'App\Http\Controllers\ReportPDFController@reportpdf_warning');
+// Route::get('/report/problem', 'App\Http\Controllers\ReportPDFController@reportpdf_warning');
 
-// Route::get('/report/map', 'App\Http\Controllers\MapScoreController@scoretable');
-// Route::get('/report/chart', 'App\Http\Controllers\ChartReportController@score');
-// Route::get('/report/scoreComposition', function () {return view('scorereport.scorelist');});
-// Route::get('/report/problem', function () {return view('scorereport.problemlist');});
+Route::get('/report/map', 'App\Http\Controllers\MapScoreController@scoretable');
+Route::get('/report/chart', 'App\Http\Controllers\ChartReportController@score');
+Route::get('/report/scoreComposition', function () {return view('scorereport.scorelist');});
+Route::get('/report/problem', function () {return view('scorereport.problemlist');});
 
 //report รายงานสรุปผลสภาพของฝายแต่ละองค์ประกอบ 
 Route::POST('/report/scoreComposition/pdf', 'App\Http\Controllers\ReportPDFController@compositionWeir')->name('report.pdf');
@@ -47,13 +47,13 @@ Route::POST('/report/problemAmp/pdf', 'App\Http\Controllers\ReportPDFController@
 // ------Tab 1 Info Weir  ------
 
 // ------Tab 2 Info sediment  ------
-Route::get('/report/sediment', 'App\Http\Controllers\ReportPDFController@reportpdf_warning');
-Route::get('/report/sedimentTable', 'App\Http\Controllers\ReportPDFController@reportpdf_warning');
-Route::POST('/report/sediment_upconcrete/pdf', 'App\Http\Controllers\ReportPDFController@reportpdf_warning');
+// Route::get('/report/sediment', 'App\Http\Controllers\ReportPDFController@reportpdf_warning');
+// Route::get('/report/sedimentTable', 'App\Http\Controllers\ReportPDFController@reportpdf_warning');
+// Route::POST('/report/sediment_upconcrete/pdf', 'App\Http\Controllers\ReportPDFController@reportpdf_warning');
 
-// Route::get('/report/sediment', 'App\Http\Controllers\MapScoreController@sedimentscore');
-// Route::get('/report/sedimentTable', function () {return view('scorereport.sediment_table');});
-// Route::POST('/report/sediment_upconcrete/pdf', 'App\Http\Controllers\ReportPDFController@sedimentUpconcrete')->name('sediment.pdf');
+Route::get('/report/sediment', 'App\Http\Controllers\MapScoreController@sedimentscore');
+Route::get('/report/sedimentTable', function () {return view('scorereport.sediment_table');});
+Route::POST('/report/sediment_upconcrete/pdf', 'App\Http\Controllers\ReportPDFController@sedimentUpconcrete')->name('sediment.pdf');
 //  //Route::get('/report/sedimentTable', 'App\Http\Controllers\ReportPDFController@reportpdf_warning');
 // ------Tab 2 Info sediment  ------
 

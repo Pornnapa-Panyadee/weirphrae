@@ -252,29 +252,25 @@
       var station3 = new L.LayerGroup();var station4 = new L.LayerGroup();
       var station5 = new L.LayerGroup();var station6 = new L.LayerGroup();
       var station7 = new L.LayerGroup();var station8 = new L.LayerGroup();
+
+
       var station9 = new L.LayerGroup();var station10 = new L.LayerGroup();
       var station11 = new L.LayerGroup();var station12 = new L.LayerGroup();
+      var station13 = new L.LayerGroup();var station14 = new L.LayerGroup();
+      var station15 = new L.LayerGroup();var station16 = new L.LayerGroup();
 
+      var station17 = new L.LayerGroup();var station18 = new L.LayerGroup();
       var station19 = new L.LayerGroup();var station20 = new L.LayerGroup();
       var station21 = new L.LayerGroup();var station22 = new L.LayerGroup();
       var station23 = new L.LayerGroup();var station24 = new L.LayerGroup();
-      var station25 = new L.LayerGroup();var station26 = new L.LayerGroup();
-      var station27 = new L.LayerGroup();var station28 = new L.LayerGroup();
-      var station29 = new L.LayerGroup();var station30 = new L.LayerGroup();
-
-      var station37 = new L.LayerGroup();var station38 = new L.LayerGroup();
-      var station39 = new L.LayerGroup();var station40 = new L.LayerGroup();
-      var station41 = new L.LayerGroup();var station42 = new L.LayerGroup();
-      var station43 = new L.LayerGroup();var station44 = new L.LayerGroup();
-      var station45 = new L.LayerGroup();var station46 = new L.LayerGroup();
-      var station47 = new L.LayerGroup();var station48 = new L.LayerGroup();
 
       var loyal = new L.LayerGroup();
       var borders= new L.LayerGroup();
-      var x = 18.690015;
-      var y = 98.656525;
 
-      var mbAttr = 'Mae Jang Basin ',
+      var x = 18.290015;
+      var y = 99.756525;
+
+      var mbAttr = 'Phare ',
           mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoidmFucGFueWEiLCJhIjoiY2loZWl5ZnJ4MGxnNHRwbHp5bmY4ZnNxOCJ9.IooQB0jYS_4QZvIq7gkjeQ';
           osm = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
               maxZoom: 20,subdomains:['mt0','mt1','mt2','mt3'], attribution: mbAttr });
@@ -391,44 +387,33 @@
         mo=1;
       }
         
-        addPin(station1,0,"2",mo);
-        addPin(station2,1,"2",mo);
-        addPin(station3,2,"2",mo);
-        addPin(station4,3,"2",mo);
-        addPin(station5,4,"2",mo);
-        addPin(station6,5,"2",mo);
-        addPin(station7,6,"2",mo);
-        addPin(station8,7,"2",mo);
-        addPin(station9,8,"2",mo);
-        addPin(station10,9,"2",mo);
-        addPin(station11,10,"2",mo);
-        addPin(station12,11,"2",mo);
+        addPin(station1,0,"1",mo);
+        addPin(station2,1,"1",mo);
+        addPin(station3,2,"1",mo);
+        addPin(station4,3,"1",mo);
+        addPin(station5,4,"1",mo);
+        addPin(station6,5,"1",mo);
+        addPin(station7,6,"1",mo);
+        addPin(station8,7,"1",mo);
 
-        addPin(station19,0,"3",mo);
-        addPin(station20,1,"3",mo);
-        addPin(station21,2,"3",mo);
-        addPin(station22,3,"3",mo);
-        addPin(station23,4,"3",mo);
-        addPin(station24,5,"3",mo);
-        addPin(station25,6,"3",mo);
-        addPin(station26,7,"3",mo);
-        addPin(station27,8,"3",mo);
-        addPin(station28,9,"3",mo);
-        addPin(station29,10,"3",mo);
-        addPin(station30,11,"3",mo);
+        addPin(station9,0,"2",mo);
+        addPin(station10,1,"2",mo);
+        addPin(station11,2,"2",mo);
+        addPin(station12,3,"2",mo);
+        addPin(station13,4,"2",mo);
+        addPin(station14,5,"2",mo);
+        addPin(station15,6,"2",mo);
+        addPin(station16,7,"2",mo);
 
-        addPin(station37,0,"4",mo);
-        addPin(station38,1,"4",mo);
-        addPin(station39,2,"4",mo);
-        addPin(station40,3,"4",mo);
-        addPin(station41,4,"4",mo);
-        addPin(station42,5,"4",mo);
-        addPin(station43,6,"4",mo);
-        addPin(station44,7,"4",mo);
-        addPin(station45,8,"4",mo);
-        addPin(station46,9,"4",mo);
-        addPin(station47,10,"4",mo);
-        addPin(station48,11,"4",mo);
+        addPin(station17,0,"3",mo);
+        addPin(station18,1,"3",mo);
+        addPin(station19,2,"3",mo);
+        addPin(station20,3,"3",mo);
+        addPin(station21,4,"3",mo);
+        addPin(station22,5,"3",mo);
+        addPin(station23,6,"3",mo);
+        addPin(station24,7,"3",mo);
+      
 
 
       var baseTree = {
@@ -453,57 +438,43 @@
                 { label:" "+amp[3],layer: station4},
                 { label:" "+amp[4],layer: station5},
                 { label:" "+amp[5],layer: station6},
-                { label:" "+amp[6],layer: station7},
-                { label:" "+amp[7],layer: station8},
-                { label:" "+amp[8],layer: station9},
-                { label:" "+amp[9],layer: station10},
-                { label:" "+amp[10],layer: station11},
-                { label:" "+amp[11],layer: station12},
+                { label:" "+amp[6],layer: station7}
           ]
         },
         {
             label: ' ปานกลาง',
             selectAllCheckbox: true,
             children: [
-                { label:" "+amp[0],layer: station19},
-                { label:" "+amp[1],layer: station20},
-                { label:" "+amp[2],layer: station21},
-                { label:" "+amp[3],layer: station22},
-                { label:" "+amp[4],layer: station23},
-                { label:" "+amp[5],layer: station24},
-                { label:" "+amp[6],layer: station25},
-                { label:" "+amp[7],layer: station26},
-                { label:" "+amp[8],layer: station27},
-                { label:" "+amp[9],layer: station28},
-                { label:" "+amp[10],layer: station29},
-                { label:" "+amp[11],layer: station30},
+                 { label:" "+amp[0],layer: station9},
+                { label:" "+amp[1],layer: station10},
+                { label:" "+amp[2],layer: station11},
+                { label:" "+amp[3],layer: station12},
+                { label:" "+amp[4],layer: station13},
+                { label:" "+amp[5],layer: station14},
+                { label:" "+amp[6],layer: station15},
+                { label:" "+amp[7],layer: station16}
           ]
         },
         {
             label: ' มาก',
             selectAllCheckbox: true,
             children: [
-                { label:" "+amp[0],layer: station37},
-                { label:" "+amp[1],layer: station38},
-                { label:" "+amp[2],layer: station39},
-                { label:" "+amp[3],layer: station40},
-                { label:" "+amp[4],layer: station41},
-                { label:" "+amp[5],layer: station42},
-                { label:" "+amp[6],layer: station43},
-                { label:" "+amp[7],layer: station44},
-                { label:" "+amp[8],layer: station45},
-                { label:" "+amp[9],layer: station46},
-                { label:" "+amp[10],layer: station47},
-                { label:" "+amp[11],layer: station48},
+                { label:" "+amp[0],layer: station17},
+                { label:" "+amp[1],layer: station18},
+                { label:" "+amp[2],layer: station19},
+                { label:" "+amp[3],layer: station20},
+                { label:" "+amp[4],layer: station21},
+                { label:" "+amp[5],layer: station22},
+                { label:" "+amp[6],layer: station23},
+                { label:" "+amp[7],layer: station24}
           ]
         }
       ];
       
       var map = L.map('map', {
-          layers: [osm,station1,station2,station3,station4,station5,station6,station7,station8,station9,station10,station11,station12,station19,station20,station21,station22,station23,station24,station25,station26,station27,station28,station29,station30,
-                  station37,station38,station39,station40,station41,station42,station43,station44,station45,station46,station47,station48,borders],
+          layers: [osm,station1,station2,station3,station4,station5,station6,station7,station8,station9,station10,station11,station12,station13,station14,station15,station16,station17,station18,station19,station20,station21,station22,station23,station24,borders],
           center: [x,y],
-          zoom: 8,
+          zoom: 9,
         });
       ctl.addTo(map).collapseTree().expandSelected();
 
