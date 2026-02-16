@@ -82,6 +82,16 @@
                           <span class="pcoded-mtext">ข้อมูลโครงการ</span>
                         </a>
                     </li>
+                    <li class="">
+                        <a href="{{ asset('/') }}" >
+                          <span class="pcoded-mtext">โครงการย่อย 1: ฝาย จ.แพร่</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="https://watercenter.scmc.cmu.ac.th/blockage/phrae/" target="_blank">
+                          <span class="pcoded-mtext">โครงการย่อย 2: สิ่งกีดขวางทางน้ำ จ.แพร่</span>
+                        </a>
+                    </li>
                     <!-- <li class="">
                         <a href="https://watercenter.scmc.cmu.ac.th/blockage/jang_basin">
                           <span class="pcoded-mtext">เว็บไซต์สิ่งกีดขวางทางน้ำ</span>
