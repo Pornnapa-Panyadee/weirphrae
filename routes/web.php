@@ -133,12 +133,14 @@ Route::get('/project/{id} ', 'App\Http\Controllers\ProjectCaseController@case');
 
 
 
-///// admin
-Route::get('/admin/list', 'App\Http\Controllers\UsersController@getUser')->name('admin.list');
-Route::get('/admin/register', function () {return view('admin.register');});
-Route::get('/admin/edit/{id}', 'App\Http\Controllers\UsersController@getdetailUser');
-Route::get('/admin/delete/{id}', 'App\Http\Controllers\UsersController@deleteUser');
-Route::post('/admin/update', 'App\Http\Controllers\UsersController@updateUser')->name('users.updatedata');
+// Admin routes: only authenticated users with status 'admin' can access
+Route::middleware(['auth', 'admin'])->group(function () {
+	Route::get('/admin/list', 'App\Http\Controllers\UsersController@getUser')->name('admin.list');
+	Route::get('/admin/register', function () { return view('admin.register'); });
+	Route::get('/admin/edit/{id}', 'App\Http\Controllers\UsersController@getdetailUser');
+	Route::get('/admin/delete/{id}', 'App\Http\Controllers\UsersController@deleteUser');
+	Route::post('/admin/update', 'App\Http\Controllers\UsersController@updateUser')->name('users.updatedata');
+});
 
 Route::get('/list', 'App\Http\Controllers\DataSurveyController@getDatatoTable')->name('list');
 Route::get('/list/expert', 'App\Http\Controllers\DataSurveyController@getDatatoTableExpert')->name('expert.list');
